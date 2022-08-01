@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  background-color: hsl(210, 46%, 95%);
+  font-family: "Barlow Semi Condensed", sans-serif;
+  color: hsl(0, 0%, 100%);
+  font-size: 13px;
+}
+
+img {
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+}
+
+ul {
+  padding-left: 10px;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul li:last-child {
+  font-size: 11px;
+  opacity: 50%;
+}
+
+.container {
+  margin: 20px auto;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.daniel-bordered {
+  border: 2px solid hsl(263, 55%, 70%);
+}
+
+.patrick-bordered {
+  border: 2px solid hsl(263, 55%, 52%);
+}
+
+.container .wrapper {
+  width: min(95%, 70rem);
+  margin-inline: auto;
+  display: grid;
+  grid-auto-columns: 1fr;
+  gap: 20px;
+  grid-template-areas:
+    "one"
+    "two"
+    "three"
+    "four"
+    "five";
+}
+
+.card:nth-child(1) {
+  grid-area: one;
+}
+
+.card:nth-child(2) {
+  grid-area: two;
+}
+
+.card:nth-child(3) {
+  grid-area: three;
+}
+
+.card:nth-child(4) {
+  grid-area: four;
+}
+
+.card:nth-child(5) {
+  grid-area: five;
+}
+
+.container .wrapper .card {
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 30px;
+  padding-right: 40px;
+  box-shadow: 20px 12px 50px 1px hsl(217, 19%, 35%, 20%);
+}
+
+.container .wrapper .card .testimonial {
+  font-size: 1.5em;
+  padding-bottom: 20px;
+}
+
+.container .wrapper .card .review {
+  line-height: 1.5em;
+  opacity: 50%;
+}
+
+.container .wrapper .card-1 {
+  background-color: hsl(263, 55%, 52%);
+}
+
+.container .wrapper .card-2 {
+  background-color: hsl(217, 19%, 35%);
+}
+
+.container .wrapper .card-3 {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(219, 29%, 14%);
+}
+
+.container .wrapper .card-4 {
+  background-color: hsl(219, 29%, 14%);
+}
+
+.container .wrapper .card-5 {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(219, 29%, 14%);
+}
+
+.container .wrapper .quote {
+  background-image: url(./images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: top right 10%;
+}
+
+@media (min-width: 768px) {
+  .container .wrapper {
+    grid-template-areas:
+      "one one"
+      "two three"
+      "four four"
+      "five five";
+  }
+}
+
+@media (min-width: 1280px) {
+  .container .wrapper {
+    grid-template-areas:
+      "one one two five"
+      "three four four five";
+  }
+}
