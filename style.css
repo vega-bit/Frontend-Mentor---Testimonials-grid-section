@@ -128,7 +128,7 @@ ul li:last-child {
 .container .wrapper .quote {
   background-image: url(./images/bg-pattern-quotation.svg);
   background-repeat: no-repeat;
-  background-position: top right 10%;
+  background-position: top right 25%;
 }
 
 @media (min-width: 768px) {
